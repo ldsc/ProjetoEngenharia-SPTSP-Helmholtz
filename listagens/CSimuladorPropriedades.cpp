@@ -3,6 +3,7 @@
 #include <cmath>
 CSimuladorPropriedades::CSimuladorPropriedades(std::string subs, double t, double d)
 {
+    //Criar a classe derivada correta
 	if (subs=="H2O"){p_Helm=new CHelmholtzAgua;substancia.massaMolar=18;substancia.nome="Agua";}
 	if (subs=="CH4"){p_Helm=new CHelmholtzMetano;substancia.massaMolar=16;substancia.nome="Metano";}
 	if (subs=="C2H6"){p_Helm=new CHelmholtzEtano;substancia.massaMolar=30;substancia.nome="Etano";}	
@@ -10,7 +11,8 @@ CSimuladorPropriedades::CSimuladorPropriedades(std::string subs, double t, doubl
 	if (subs=="nC4H10"){p_Helm=new CHelmholtzNbutano;substancia.massaMolar=58.12;substancia.nome="n-Butano";}	
 	if (subs=="iC4H10"){p_Helm=new CHelmholtzIsobutano;substancia.massaMolar=58.12;substancia.nome="isoButano";}	
 	if (subs=="N2"){p_Helm=new CHelmholtzNitrogenio;substancia.massaMolar=28.013;substancia.nome="Nitrogenio";}	
-	substancia.temperatura=t;
+    //Passando valores de temperatura e densidade
+    substancia.temperatura=t;
 	substancia.densidade=d;
 	p_Helm->tau=p_Helm->tCritica/t;
 	p_Helm->delta=d/p_Helm->dCritica;
@@ -18,6 +20,7 @@ CSimuladorPropriedades::CSimuladorPropriedades(std::string subs, double t, doubl
 }
 CSimuladorPropriedades::CSimuladorPropriedades(std::string subs, double t, double d, int flag)
 {
+    //Criar a classe derivada correta
 	if (subs=="H2O"){p_Helm=new CHelmholtzAgua;substancia.massaMolar=18.01528;substancia.nome="Agua";}
 	if (subs=="CH4"){p_Helm=new CHelmholtzMetano;substancia.massaMolar=16.04;substancia.nome="Metano";}
 	if (subs=="C2H6"){p_Helm=new CHelmholtzEtano;substancia.massaMolar=30.07;substancia.nome="Etano";}	
@@ -25,7 +28,8 @@ CSimuladorPropriedades::CSimuladorPropriedades(std::string subs, double t, doubl
 	if (subs=="nC4H10"){p_Helm=new CHelmholtzNbutano;substancia.massaMolar=58.12;substancia.nome="n-Butano";}
 	if (subs=="iC4H10"){p_Helm=new CHelmholtzIsobutano;substancia.massaMolar=58.12;substancia.nome="isoButano";}	
 	if (subs=="N2"){p_Helm=new CHelmholtzNitrogenio;substancia.massaMolar=28.013;substancia.nome="Nitrogenio";}	
-	substancia.temperatura=t;
+    //Passando valores de temperatura e densidade, e da flag
+    substancia.temperatura=t;
 	substancia.densidade=d;
 	p_Helm->tau=p_Helm->tCritica/t;
 	p_Helm->delta=d/p_Helm->dCritica;
@@ -60,6 +64,13 @@ void CSimuladorPropriedades::CalcularTudo()
 	VelocidadeSom();
 	CoefIsentropico();
 }
+void CSimuladorPropriedades::Pressao(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    Pressao();
+    Set_Flag(temp);
+}
 void CSimuladorPropriedades::Pressao()
 {
 	int temp=flag_derivadas;
@@ -90,6 +101,13 @@ void CSimuladorPropriedades::Pressao()
 		substancia.pressao.valor=((1+(p_Helm->delta*p_Helm->fResidual_d))*substancia.densidade*substancia.temperatura*p_Helm->rEspecifico)/100;
 		temp--;
 		}
+}
+void CSimuladorPropriedades::Entalpia(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    Entalpia();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::Entalpia()
 {
@@ -131,6 +149,12 @@ void CSimuladorPropriedades::Entalpia()
 		substancia.entalpia.valor=(1+p_Helm->tau*(p_Helm->fIdeal_t+p_Helm->fResidual_t)+p_Helm->delta*p_Helm->fResidual_d)*p_Helm->rEspecifico*substancia.temperatura;
 		temp-=1;
 		}
+}void CSimuladorPropriedades::Entropia(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    Entropia();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::Entropia()
 {
@@ -168,6 +192,13 @@ void CSimuladorPropriedades::Entropia()
 	if (temp>=1){
 		substancia.entropia.valor=(p_Helm->tau*(p_Helm->fIdeal_t+p_Helm->fResidual_t)-(p_Helm->fIdeal+p_Helm->fResidual))*p_Helm->rEspecifico;
 		temp-=1;}
+}
+void CSimuladorPropriedades::EnergiaGibbs(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    EnergiaGibbs();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::EnergiaGibbs()
 {
@@ -210,7 +241,13 @@ void CSimuladorPropriedades::EnergiaGibbs()
 	if (temp>=1){substancia.energiaGibbs.valor=(1+p_Helm->fIdeal+p_Helm->fResidual+(p_Helm->delta*p_Helm->fResidual_d))*p_Helm->rEspecifico*substancia.temperatura;
 		temp-=1;}
 }
-
+void CSimuladorPropriedades::EnergiaInterna(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    EnergiaInterna();
+    Set_Flag(temp);
+}
 void CSimuladorPropriedades::EnergiaInterna()
 {
 	int temp=flag_derivadas;
@@ -246,6 +283,13 @@ void CSimuladorPropriedades::EnergiaInterna()
 		substancia.energiaInterna.valor=p_Helm->tau*(p_Helm->fResidual_t+p_Helm->fIdeal_t)*p_Helm->rEspecifico*substancia.temperatura;
 		temp-=1;
 		}
+}
+void CSimuladorPropriedades::CapCalorificaIsovolumetrica(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    CapCalorificaIsovolumetrica();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::CapCalorificaIsovolumetrica()
 {
@@ -283,6 +327,13 @@ void CSimuladorPropriedades::CapCalorificaIsovolumetrica()
 	if (temp>=1){substancia.capCalorificaIsovolumetrica.valor=-p_Helm->tau*p_Helm->tau*(p_Helm->fResidual_tt+p_Helm->fIdeal_tt)*p_Helm->rEspecifico;
 		temp-=1;
 		}
+}
+void CSimuladorPropriedades::CapCalorificaIsobarica(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    CapCalorificaIsobarica();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::CapCalorificaIsobarica()
 {
@@ -343,6 +394,13 @@ void CSimuladorPropriedades::CapCalorificaIsobarica()
 		substancia.capCalorificaIsobarica.valor=x*p_Helm->rEspecifico;
 		temp-=1;
 		}
+}
+void CSimuladorPropriedades::VelocidadeSom(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    VelocidadeSom();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::VelocidadeSom()
 {
@@ -418,6 +476,13 @@ void CSimuladorPropriedades::VelocidadeSom()
 		temp-=1;
 		}
 }
+void CSimuladorPropriedades::CoefEnforcamento(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    CoefEnforcamento();
+    Set_Flag(temp);
+}
 void CSimuladorPropriedades::CoefEnforcamento()
 {
 	int temp=flag_derivadas;
@@ -472,6 +537,13 @@ void CSimuladorPropriedades::CoefEnforcamento()
 		substancia.coefEnforcamento.valor/=substancia.densidade;
 		temp-=1;
 		}
+}
+void CSimuladorPropriedades::CoefJouleThomson(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    CoefJouleThomson();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::CoefJouleThomson()
 {
@@ -549,6 +621,13 @@ void CSimuladorPropriedades::CoefJouleThomson()
 		substancia.coefJouleThomson.valor*=1000/(p_Helm->rEspecifico*substancia.densidade);
 		temp-=1;
 		}
+}
+void CSimuladorPropriedades::CoefIsentropico(int flag)
+{
+    int temp = flag_derivadas;
+    Set_Flag(flag);
+    CoefIsentropico();
+    Set_Flag(temp);
 }
 void CSimuladorPropriedades::CoefIsentropico()
 {

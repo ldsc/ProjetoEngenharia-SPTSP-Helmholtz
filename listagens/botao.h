@@ -38,13 +38,20 @@
 **
 ****************************************************************************/
 
-#include <QApplication>
-#include "SPTSPGUI.h"
+#ifndef BOTAO_H
+#define BOTAO_H
+#include <QToolButton>
 
-int main(int argc, char *argv[])
+//! [0]
+class Botao : public QToolButton
 {
-    QApplication app(argc, argv);
-    SPTSPGUI gui;
-    gui.show();
-    return app.exec();
-}
+    Q_OBJECT
+
+public:
+    explicit Botao(const QString &texto, QWidget *pai = 0);
+
+    QSize sizeHint() const;
+};
+//! [0]
+
+#endif

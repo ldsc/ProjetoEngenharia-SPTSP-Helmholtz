@@ -16,18 +16,22 @@ void CHelmholtz::Desaloca (double**& pm, int nx)
 }	
 void CHelmholtz::FR()
 {
-	fResidual=0;
+    fResidual=0;
+    //Parte polinomial
 	for(int i=0;i<numeroCoeficientes[1];i++){
 		fResidual+=coeficientesPolinomio[i][2]*pow(delta,coeficientesPolinomio[i][0])*pow(tau,coeficientesPolinomio[i][1]);
 	}
+    //Parte exponencial
 	for(int i=0;i<numeroCoeficientes[2];i++){
 		fResidual+=coeficientesExponenciais[i][3]*pow(delta,coeficientesExponenciais[i][1])*pow(tau,coeficientesExponenciais[i][2])*exp(-pow(delta,coeficientesExponenciais[i][0]));
 	}
+    //Parte de curva Gaussiana
 	for(int i=0;i<numeroCoeficientes[3];i++){
 		double a=coeficientesGaussianos[i][2]*pow(delta,coeficientesGaussianos[i][0])*pow(tau,coeficientesGaussianos[i][1]);
 		double b=exp(-coeficientesGaussianos[i][3]*pow((delta-coeficientesGaussianos[i][6]),2)-coeficientesGaussianos[i][4]*pow((tau-coeficientesGaussianos[i][5]),2));
 		fResidual+=a*b;
 	}
+    //Parte nao-analitica
 	for(int i=0;i<numeroCoeficientes[4];i++){
 		double fi=(1-tau)+coeficientesNaoAnaliticos[i][6]*pow(pow((delta-1),2),(1/(2*coeficientesNaoAnaliticos[i][7])));
 		double mdelta=pow(fi,2)+coeficientesNaoAnaliticos[i][2]*pow(pow((delta-1),2),coeficientesNaoAnaliticos[i][0]);

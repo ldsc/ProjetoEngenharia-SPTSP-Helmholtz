@@ -19,7 +19,7 @@ class CHelmholtz
 		double tCritica; /*temperatura critica da substancia escolhida*/
 		double dCritica; /*densidade critica da substancia escolhida*/
 		double rEspecifico; /*Constante espeficia dos gases*/
-		double delta, tau; /*densidade reduzida e inverso da temperatura reduzida*/
+        double delta, tau; /*densidade e temperatura reduzidas*/
 		double fIdeal, fIdeal_t, fIdeal_tt, fIdeal_ttt; /*Parte ideal e derivadas com relacao a temperatura da equacao*/
 		double fResidual; /*parte residual da equacao*/
 		double fResidual_t, fResidual_d; /*derivadas de primeiro grau da parte residual da equacao, a letra depois de _ indica em relacao a temperatura ou densidade*/

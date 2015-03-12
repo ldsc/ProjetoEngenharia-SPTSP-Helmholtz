@@ -1,11 +1,11 @@
 #include "CHelmholtzAgua.h"
 CHelmholtzAgua::CHelmholtzAgua()
 {
-	tCritica=647.096;
-	dCritica=322;
-	rEspecifico=0.46151805;
-	int a[5]={5,7,44,3,2};
-	for(int i=0;i<5;i++)numeroCoeficientes[i]=a[i];
+    tCritica=647.096;//Temperatura critica
+    dCritica=322;//Densidade critica
+    rEspecifico=0.46151805;//Constante dos gases especifica
+    int a[5]={5,7,44,3,2};
+    for(int i=0;i<5;i++)numeroCoeficientes[i]=a[i];/*Numero de somatorios de cada parte*/
 	double b[3]={-8.32044648201,6.6832105268,3.00632};
 	coeficientesIdeais1 = new double[3];
 	for(int i=0;i<3;i++)coeficientesIdeais1[i]=b[i];

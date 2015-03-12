@@ -38,13 +38,25 @@
 **
 ****************************************************************************/
 
-#include <QApplication>
-#include "SPTSPGUI.h"
+#include <QtWidgets>
+#include "botao.h"
 
-int main(int argc, char *argv[])
+//! [0]
+Botao::Botao(const QString &texto, QWidget *pai)
+    : QToolButton(pai)
 {
-    QApplication app(argc, argv);
-    SPTSPGUI gui;
-    gui.show();
-    return app.exec();
+    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    setText(texto);
 }
+//! [0]
+
+//! [1]
+QSize Botao::sizeHint() const
+//! [1] //! [2]
+{
+    QSize size = QToolButton::sizeHint();
+    size.rheight() += 20;
+    size.rwidth() = qMax(size.width(), size.height());
+    return size;
+}
+//! [2]
