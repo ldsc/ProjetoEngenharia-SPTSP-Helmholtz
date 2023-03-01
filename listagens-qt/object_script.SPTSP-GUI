@@ -1,0 +1,17 @@
+INPUT(
+./main.o
+./CHelmholtz.o
+./CHelmholtzAgua.o
+./CSimuladorPropriedades.o
+./CSubstancia.o
+./CHelmholtzDioxidoCarbono.o
+./CHelmholtzEtano.o
+./CHelmholtzIsobutano.o
+./CHelmholtzMetano.o
+./CHelmholtzNbutano.o
+./CHelmholtzNitrogenio.o
+./botao.o
+./SPTSPGUI.o
+./moc_botao.o
+./moc_SPTSPGUI.o
+);

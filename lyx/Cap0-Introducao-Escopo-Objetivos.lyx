@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass extbook
+\textclass book
 \begin_preamble
 \usepackage {graphicx}
 \usepackage {longtable}
@@ -159,7 +159,7 @@ O título deve ser o mais claro possível, não deixando dúvidas sobre o assunt
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 5cm
+\begin_inset VSpace 6cm
 \end_inset
 
 
@@ -177,7 +177,8 @@ DESENVOLVIMENTO DO SOFTWARE
 \begin_inset Newline newline
 \end_inset
 
-XXX
+SIMULADOR DE PROPRIEDADES TERMODINÂMICAS DE SUBSTÂNCIAS PURAS A PARTIR DE
+ DENSIDADE E TEMPERATURA
 \begin_inset Newline newline
 \end_inset
 
@@ -185,7 +186,7 @@ TRABALHO DA DISCIPLINA PROGRAMAÇÃO PRÁTICA
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 5cm
+\begin_inset VSpace 6cm
 \end_inset
 
 
@@ -195,29 +196,21 @@ TRABALHO DA DISCIPLINA PROGRAMAÇÃO PRÁTICA
 \align center
 
 \size large
-NOME COMPLETO DOS AUTORES
-\begin_inset Newline newline
-\end_inset
+THÔMAS AUGUSTO STEMPKOWSKI MENEGAZZO
+\end_layout
 
-AUTORES
-\begin_inset Newline newline
-\end_inset
+\begin_layout Standard
+\align center
+PROFESSOR ANDRÉ DUARTE BUENO (SOFTWARE)
+\end_layout
 
-AUTORES
+\begin_layout Standard
+\align center
+PROFESSOR ADOLFO PUIME PIRES (TERMODINÂMICA)
 \end_layout
 
 \begin_layout Standard
 \begin_inset VSpace 5cm
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-o valor de 4cm pode ser alterado, para que a distribuição fique mais uniforme
-\end_layout
-
 \end_inset
 
 
@@ -231,7 +224,7 @@ MACAÉ - RJ
 \begin_inset Newline newline
 \end_inset
 
-MARÇO - 2014
+MARÇO - 2015
 \end_layout
 
 \begin_layout Standard
@@ -286,16 +279,35 @@ pagenumbering{arabic}
 \end_layout
 
 \begin_layout Standard
-No presente projeto de engenharia desenvolve-se o software XXXX, um software
- aplicado a engenharia de petróleo e que utiliza o paradigma da orientação
- a objetos.
+No presente projeto de engenharia desenvolve-se o software SPTSP(Simulador
+ de Propriedades Termodinâmica de Substâncias Puras), um software aplicado
+ a engenharia de petróleo e que utiliza o paradigma da orientação a objetos.
 \end_layout
 
+\begin_layout Standard
+Neste trabalho é implementada uma equação experimental, baseada na energia
+ livre de Helmholtz, para substâncias puras obtidas a partir da literatura.
+ Por meio desta equação, poderão ser calculadas várias propriedades termodinâmic
+as do fluido a partir de dados de temperatura e pressão.
+\end_layout
+
+\begin_layout Description
+Licença: O presente software tem licença GPL 2.
+ Maiores detalhes em: 
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
-O primeiro parágrafo da introdução pode ser um super resumo do trabalho.
- A ideia é fazer um resumo do resumo.
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.gnu.org/licenses/licenses.pt-br.html"
+
+\end_inset
+
+
 \end_layout
 
+\end_deeper
 \begin_layout Section
 Escopo do problema
 \begin_inset CommandInset label
@@ -308,36 +320,27 @@ name "sec:Escopo-do-Problema"
 \end_layout
 
 \begin_layout Standard
-Segundo o CREA/CONFEA um dos quesitos fundamentais que diferenciam a atuação
- de um tecnólogo da atuação de um engenheiro é a capacidade de desenvolver
- um projeto em engenharia; Neste trabalho, desenvolve-se um projeto em engenhari
-a de software aplicado a solução de um problema específico de engenharia
- de petróleo.
- Trabalhando-se com todo ciclo de um projeto, isto é, especificação, elaboração,
- análise, projeto, desenvolvimento, teste e documentação.
+A correta previsão das propriedades termodinâmicas e cálculo do equilíbrio
+ de fases constitui-se num ponto fundamental do projeto de qualquer processo
+ da industria química, como sistemas de refrigeração.
+ A exploração e produção de reservas naturais de hidrocarbonetos não foge
+ a essa regra, com a dificuldade adicional de tratar complexas misturas
+ de hidrocarbonetos, muitas vezes não bem caracterizadas, além da presença
+ de compostos não orgânicos, como água e dióxido de carbono, empregados
+ em técnicas para aumentar o fator de recuperação das jazidas.
  
 \end_layout
 
-\begin_layout Itemize
-ESTE MODELO TEM TEXTOS EXPLICATVOS QUE DEVEM SER ELIMINADOS DA VERSÃO FINAL.
- O OBJETIVO DE COLOCAR AS EXPLICAÇÕES É FACILITAR A LEMBRANÇA DO QUE ENTRE
- EM CADA SEÇÃO.
-\end_layout
-
-\begin_layout Itemize
-Definir o escopo do projeto de engenharia, a ideia geral do software, acentuar
- sua importância, usos e aplicações em engenharia [de petróleo].
-\end_layout
-
-\begin_layout Itemize
-Delimitar o assunto.
- Situá-lo no tempo e no espaço.
- Situá-lo em relação a outros softwares.
-\end_layout
-
-\begin_layout Itemize
-Neste capítulo podem entrar figuras que ilustram a ideia geral, o detalhamento
- será feito depois, na elaboração.
+\begin_layout Standard
+Na simulação numérica computacional, que usa o modelo composicional de reservató
+rios de hidrocarbonetos, um dos conjuntos de equações utilizado para a solução
+ é composto pelos coeficientes de distribuição dos componentes entre as
+ fases presentes no meio poroso.
+ Em varios momentos da simulação uma ou mais fases podem ser constituídas
+ de compostos puros.
+ Nesse caso, ao invés de utilizar equações de estado, são utilizadas correlações
+ para prever as propriedades termodinâmicas, bem como as suas derivadas
+ (necessárias para o cálculo do jacobiano do método de Newton).
 \end_layout
 
 \begin_layout Section
@@ -361,52 +364,22 @@ Objetivo geral:
 
 \begin_deeper
 \begin_layout Itemize
-Descreva aqui o objetivo geral do projeto de engenharia, incluindo vínculos
- com engenharia de petróleo e com modelagem matemática computacional (ideia
- de lógica, algoritmos,...).
-\end_layout
-
-\begin_layout Itemize
-Desenvolver um projeto de engenharia de software para ...[.....descrever de forma
- clara, direta, objetiva, o objetivo geral do software].
+Deselvolver um software que calcula as propriedades termodinâmicas de uma
+ substância pura a partir de equações experimentais.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Objetivos específicos:
+Objetivos específicos do software incluem:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Modelar física e matematicamente o problema.
+Unir as diversas equações experimentais em um programa único.
 \end_layout
 
 \begin_layout Itemize
-Modelagem estática do software (diagramas de caso de uso, de pacotes, de
- classes).
-\end_layout
-
-\begin_layout Itemize
-Modelagem dinâmica do software (desenvolver algoritmos e diagramas exemplificand
-o os fluxos de processamento).
-\end_layout
-
-\begin_layout Itemize
-Calcular XXX[.....descrever de forma clara, direta, objetiva, cada objetivo específic
-o, cada parte do software].
-\end_layout
-
-\begin_layout Itemize
-Calcular XXX[.....descrever de forma clara, direta, objetiva, cada objetivo específic
-o, cada parte do software].
-\end_layout
-
-\begin_layout Itemize
-Simular (realizar simulações para teste do software desenvolvido).
-\end_layout
-
-\begin_layout Itemize
-Implementar manual simplificado de uso do software.
+Deselvolver software com interface gráfica amigável.
 \end_layout
 
 \end_deeper

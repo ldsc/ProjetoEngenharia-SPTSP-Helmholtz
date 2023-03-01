@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass extbook
+\textclass book
 \begin_preamble
 
 \usepackage {graphicx}
@@ -130,7 +130,7 @@ o do sistema a ser modelado e desenvolvido.
 \end_layout
 
 \begin_layout Section
-O que é a especificação?
+Especificação do programa - descrição dos requisitos
 \begin_inset Index idx
 status collapsed
 
@@ -184,89 +184,26 @@ name "sec:Especificação e cenários"
 
 \end_layout
 
-\begin_layout Description
-Nota: os textos que explicam o que é especificação; diagrama caso uso; etc....;
- foram colocados apenas para que você se lembre do assunto; na versão final
- do seu trabalho estes texto explicativos feitos pelo professor devem ser
- retirados/apagados.
+\begin_layout Itemize
+O projeto a ser desenvolvido consiste em um software que pede qual substância
+ será calculada, sua densidade e temperatura.
+ O programa então pedirá quais propriedades o usuário deseja calcular, se
+ ele deseja as derivadas das propriedades, e quais derivadas.
+ Com isso ele calculará a energia livre de Helmholtz e as derivadas desta
+ necessárias para o cálculo das propriedades escolhidas.
+ Através de relações termodinâmicas as propriedades e suas derivadas serão
+ calculadas, e retornadas  ao usuário.
 \end_layout
 
-\begin_layout Standard
-A primeira etapa do desenvolvimento de um sistema é a concepção, a definição
- de requisitos a serem satisfeitos e a especificação do sistema (descrição
- do objetivo e o que se espera do sistema a ser desenvolvido, o contexto
- da aplicação).
+\begin_layout Itemize
+O software será desenvolvido utilizando o conceito de programação orientada
+ a objeto.
 \end_layout
 
-\begin_layout Standard
-Na concepção ocorre a primeira reunião da equipe de desenvolvimento com
- os clientes, quando é feita a especificação do software.
- O cliente por meio das especificações e das entrevistas, passa para o analista
- idéias gerais de uso do sistema.
- Neste caso, o cliente é o professor da disciplina e os alunos os analistas/dese
-nvolvedores.
+\begin_layout Itemize
+Será feita uma interface em modo texto e uma interface gráfica amigável.
 \end_layout
 
-\begin_layout Standard
-O resultado da etapa de especificação é um conjunto formal de documentos
- e requisitos organizados pelo analista do sistema com apoio dos usuários.
- 
-\end_layout
-
-\begin_layout Standard
-As 
-\shape italic
-especificações
-\shape default
- definem as características gerais do sistema, aquilo que ele deve realizar
- e não a forma como irá fazê-lo.
- Definem as necessidades a serem satisfeitas.
- Envolvem a seleção do tipo de interface, a forma de interação com o usuário;
- se vai ter uma ou múltiplas janelas; se o software vai imprimir seus resultados
-, o formato dos arquivos de disco; se vai existir um help e seu formato.
- Podem ser especificadas características de desempenho.
- O cliente define o que deve obrigatoriamente ser satisfeito e o que é opcional
- -- isto é, tudo o que o sistema/software deve ser.
- 
-\end_layout
-
-\begin_layout Description
-Dica: a comunicação com o cliente pode ser melhorada com o uso de metáforas,
- como, por exemplo, a metáfora da "lixeira".
- 
-\end_layout
-
-\begin_layout Description
-NOTA
-\begin_inset space ~
-\end_inset
-
-IMPORTANTE:
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Como requisitos mínimos o software deve:
-\end_layout
-
-\begin_layout Standard
-Solicitar dados ao usuário via terminal (teclado/tela);
-\end_layout
-
-\begin_layout Standard
-Mostrar resultados na tela;
-\end_layout
-
-\begin_layout Standard
-Ler dados de entrada e gerar dados de saída em arquivos de disco;
-\end_layout
-
-\begin_layout Standard
-Plotar gráficos usando biblioteca externa CGnuplot (tem livro do gnuplot
- na biblioteca );
-\end_layout
-
-\end_deeper
 \begin_layout Section
 Especificação do software - requisitos
 \begin_inset Index idx
@@ -279,10 +216,6 @@ requisitos
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Nesta seção ...
 \end_layout
 
 \begin_layout Subsection
@@ -311,7 +244,7 @@ Nome
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+SPTSP
 \end_layout
 
 \end_inset
@@ -333,7 +266,7 @@ Componentes principais
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Sistema para cálculo das propriedades termodinâmicas, interface gráfica.
 \end_layout
 
 \end_inset
@@ -355,7 +288,7 @@ Missão
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Cálculo de propriedades termodinâmicas de substâncias puras.
 \end_layout
 
 \end_inset
@@ -366,24 +299,6 @@ Missão
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Especificação
-\end_layout
-
-\begin_layout Standard
-Apresenta-se a seguir a especificação do software.
-\end_layout
-
-\begin_layout Standard
-....coloque aqui a especificação...
-\end_layout
-
-\begin_layout Standard
-...eventualmente coloque imagem ilustrativa geral, mostrando o que se pretente
- (primeira ideia) do software; normalmente esta figura já será mais detalhada
- que aquela apresentada no escopo...
 \end_layout
 
 \begin_layout Subsection
@@ -391,60 +306,10 @@ Requisitos funcionais
 \end_layout
 
 \begin_layout Standard
-Apresenta-se a seguir os requisitos funcionais
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-coloque aqueles que fazem sentido para seu sistema
-\end_layout
-
-\end_inset
-
-.
+Apresenta-se a seguir os requisitos funcionais.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" tabularvalignment="middle" tabularwidth="14cm">
-<column alignment="block" valignment="top">
-<column alignment="block" valignment="top" width="11.5cm">
-<row>
-<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-RF-01
-\end_layout
-
-\end_inset
-</cell>
-<cell mroffset="2cm" alignment="block" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-O sistema deve conter uma base de dados xxx.
- O usuário deve ser capaz de xxx.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features rotate="0" tabularvalignment="middle" tabularwidth="14cm">
@@ -457,7 +322,7 @@ O sistema deve conter uma base de dados xxx.
 \begin_layout Plain Layout
 
 \series bold
-RF-02
+RF-01
 \end_layout
 
 \end_inset
@@ -466,7 +331,7 @@ RF-02
 \begin_inset Text
 
 \begin_layout Plain Layout
-O usuário deverá ter liberdade para xxxx.
+O usuário deverá ter liberdade para escolher o que deseja calcular.
 \end_layout
 
 \end_inset
@@ -496,7 +361,7 @@ O usuário deverá ter liberdade para xxxx.
 \begin_layout Plain Layout
 
 \series bold
-RF-03
+RF-02
 \end_layout
 
 \end_inset
@@ -506,131 +371,6 @@ RF-03
 
 \begin_layout Plain Layout
 Deve permitir o carregamento de arquivos criados pelo software.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" tabularvalignment="middle" tabularwidth="14cm">
-<column alignment="center" valignment="top">
-<column alignment="block" valignment="top" width="11.5cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-RF-04
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Deve permitir a escolha da equação xxx.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" tabularvalignment="middle" tabularwidth="14cm">
-<column alignment="center" valignment="top">
-<column alignment="block" valignment="top" width="11.5cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-RF-05
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-O usuário deve ter tal liberdade para escolher xxx.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" tabularvalignment="middle" tabularwidth="14cm">
-<column alignment="center" valignment="top">
-<column alignment="block" valignment="top" width="11.5cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-RF-06
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-O usuário poderá plotar seus resultados em um gráfico.
- O gráfico poderá ser salvo como imagem ou ter seus dados exportados como
- texto.
 \end_layout
 
 \end_inset
@@ -676,48 +416,6 @@ RNF-01
 \begin_inset Text
 
 \begin_layout Plain Layout
-Os cálculos devem ser feitos utilizando-se xxxx.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" tabularvalignment="middle" tabularwidth="14cm">
-<column alignment="center" valignment="top">
-<column alignment="block" valignment="top" width="11cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-RNF-02
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 O programa deverá ser multi-plataforma, podendo ser executado em 
 \emph on
 Windows
@@ -729,6 +427,10 @@ GNU/Linux
  ou 
 \emph on
 Mac
+\emph default
+ 
+\emph on
+OS X
 \emph default
 .
 \end_layout
@@ -744,7 +446,7 @@ Mac
 \end_layout
 
 \begin_layout Section
-O que são os casos de uso
+Casos de uso
 \begin_inset Index idx
 status collapsed
 
@@ -754,105 +456,18 @@ Casos de uso
 
 \end_inset
 
- do sistema -- cenários
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Casos-de-uso-do-programa"
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Cenário
-\end_layout
-
-\end_inset
-
-?
+ do software
 \end_layout
 
 \begin_layout Standard
-Segundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-UML-blaha"
-
-\end_inset
-
-, "um 
-\shape italic
-cenário
-\shape default
- pode ser um registro histórico de execução de um sistema real ou um experimento
- de execução teórica de um sistema proposto"
-\emph on
-.
-\end_layout
-
-\begin_layout Standard
-Um 
-\shape italic
-caso de uso
-\shape default
- descreve um ou mais cenários de uso do software, exemplos de uso, como
- o sistema interage com usuários externos (atores).
- Ademais, ele deve representar uma seqüência típica de uso do software (a
- execução de determinadas tarefas-padrão).
- Também deve representar as exceções, casos em que o usuário comete algum
- erro, em que o sistema não consegue realizar as tarefas solicitadas.
- 
-\end_layout
-
-\begin_layout Standard
-Segundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-
-\end_inset
-
-, o caso de uso deve "produzir uma descrição clara e não ambígua de como
- o usuário final e o sistema interagem um com o outro".
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-
-\end_inset
-
- diz ainda que "uma vez definidos o ator e seu caso de uso, uma hierarquia
- de comandos é identificada"
-\emph on
-.
-\end_layout
-
-\begin_layout Standard
-Devem ser montados diversos diagramas de caso de uso.
- Por exemplo: para cada cenário, crie diagramas de seqüência listando os
- objetos e os diversos eventos que partem de um objeto para outro.
-\end_layout
-
-\begin_layout Standard
-A Tabela 
+Apresenta-se na tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cap:Exemplo-de-um-caso-de-uso (tabela)"
+reference "cap:Exemplo-de-um-caso-de-uso (tabela)-1"
 
 \end_inset
 
- mostra os itens a serem incluídos na descrição do caso de uso, podendo-se
- ainda incluira lista de atores e as pré-condições para execução.
- O item etapas é opcional, pois elas podem ser incluídas diretamente no
- diagrama de caso de uso.
-\end_layout
-
-\begin_layout Standard
-Uma vez apresentados os conceitos relacionados aos casos de uso, cenários,
- apresentaremos como modelar os cenários com os diagramas de caso de uso
- da UML.
+ um exemplo de caso de uso geral.
 \end_layout
 
 \begin_layout Standard
@@ -869,11 +484,11 @@ status open
 Exemplo de caso de uso
 \begin_inset CommandInset label
 LatexCommand label
-name "cap:Exemplo-de-um-caso-de-uso (tabela)"
+name "cap:Exemplo-de-um-caso-de-uso (tabela)-1"
 
 \end_inset
 
-.
+
 \end_layout
 
 \end_inset
@@ -909,7 +524,7 @@ Nome do caso de uso:
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cálculo da integral de uma função.
+Cálculo de uma propriedade.
 \end_layout
 
 \end_inset
@@ -929,7 +544,7 @@ Resumo/descrição:
 \begin_inset Text
 
 \begin_layout Plain Layout
-Determinação da integral de uma função em um dado intervalo.
+Cálculo de uma propriedade a partir da temperatura e densidade de uma substância.
 \end_layout
 
 \end_inset
@@ -950,31 +565,26 @@ Etapas:
 
 \begin_layout Plain Layout
 1.
- Criar objeto função.
+ Criar objeto SPTSP.
 \end_layout
 
 \begin_layout Plain Layout
 2.
- Criar objeto de integração.
+ Entrar com temperatura, densidade e substância.
 \end_layout
 
 \begin_layout Plain Layout
 3.
- Definir intervalo de integração e número de pontos.
+ Escolher a propriedade a ser calculada.
 \end_layout
 
 \begin_layout Plain Layout
 4.
- Calcular área da função.
+ Calcular propriedade.
 \end_layout
 
 \begin_layout Plain Layout
 5.
- Gerar gráficos.
-\end_layout
-
-\begin_layout Plain Layout
-6.
  Analisar resultados.
 \end_layout
 
@@ -995,9 +605,7 @@ Cenários alternativos:
 \begin_inset Text
 
 \begin_layout Plain Layout
-Um cenário alternativo envolve uma entrada errada do usuário (por exemplo,
- a função é logarítmica, e o intervalo vai de -1 a 10).
- O software apresentará um bug quando for determinar o logarítmo de -1.
+Um cenário alternativo envolve o cálculo da derivada de uma propriedade.
 \end_layout
 
 \end_inset
@@ -1013,34 +621,6 @@ Um cenário alternativo envolve uma entrada errada do usuário (por exemplo,
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-As Figuras devem ficar GRANDES; bem legíveis!! se necessário dar zoom!!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Casos de uso
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Casos de uso
-\end_layout
-
-\end_inset
-
- do software
-\end_layout
-
-\begin_layout Standard
-....tabela descritiva aqui...
 \end_layout
 
 \begin_layout Section
@@ -1094,14 +674,6 @@ Diagrama de caso de uso geral do software
 \end_layout
 
 \begin_layout Standard
-....coloque aqui caso de uso geral, descrição + figura(s)...
-\end_layout
-
-\begin_layout Standard
-exemplo...
-\end_layout
-
-\begin_layout Standard
 O diagrama de caso de uso geral da Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1109,8 +681,8 @@ reference "cap:Diagrama-caso-uso-geral"
 
 \end_inset
 
- mostra o usuário acessando os sistemas de ajuda do software, calculando
- a área de uma função ou analisando resultados.
+ mostra o usuário entrando com os dados, calculando propriedades e/ou derivadas,
+ e analisando resultados.
  
 \end_layout
 
@@ -1123,7 +695,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/DiagCasoDeUso-AnaliseDosResultados.png
+	filename ../imagens/Diagrama_de_Caso_de_Uso_Geral.bmp
 	width 100text%
 
 \end_inset
@@ -1153,107 +725,6 @@ name "cap:Diagrama-caso-uso-geral"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Diagrama de caso de uso específico do software
-\end_layout
-
-\begin_layout Standard
-....coloque aqui casos de uso específicos, descrição + figura(s)...
-\end_layout
-
-\begin_layout Standard
-exemplo...O caso de uso Calcular área função descrito na Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cap:Diagrama-caso-uso-geral"
-
-\end_inset
-
- e na Tabela 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cap:Exemplo-de-um-caso-de-uso (tabela)"
-
-\end_inset
-
- é detalhado na Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
-
-\end_inset
-
-.
- O usuário criará um objeto função matemática, um objeto para sua integração;
- em seguida, definirá o intervalo de integração, calculará a área da função
- criada e,  por fim, analisará os resultados (eventualmente gerará gráficos
- com os resultados obtidos utilizando um sistema externo, como o software
- 
-\emph on
-gnuplot
-\emph default
-).
- Este diagrama de caso de uso ilustra as etapas a serem executadas pelo
- usuário ou sistema, a iteração do usuário com o sistema.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../imagens/DiagCasoDeUso-AnaliseDosResultados.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Diagrama de caso de uso específico -- Título
-\begin_inset CommandInset label
-LatexCommand label
-name "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Nota: 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Não perca de vista a visão do todo; do projeto de engenharia como um todo.
- Cada capítulo, cada seção, cada parágrafo deve se encaixar.
- Este é um diferencial fundamental do engenheiro em relação ao técnico,
- a capacidade de desenvolver projetos, de ver o todo e suas diferentes partes,
- de modelar processos/sistemas/produtos de engenharia.
 \end_layout
 
 \end_body

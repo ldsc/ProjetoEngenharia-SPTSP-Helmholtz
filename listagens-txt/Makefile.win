@@ -1,0 +1,58 @@
+# Project: PropriedadesSubstanciaPura
+# Makefile created by Dev-C++ 5.6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = CSubstancia.o CHelmholtzAgua.o CSimuladorPropriedades.o CHelmholtz.o Main.o CHelmholtzMetano.o CHelmholtzEtano.o CHelmholtzDioxidoCarbono.o CHelmholtzIsobutano.o CHelmholtzNbutano.o CHelmholtzNitrogenio.o
+LINKOBJ  = CSubstancia.o CHelmholtzAgua.o CSimuladorPropriedades.o CHelmholtz.o Main.o CHelmholtzMetano.o CHelmholtzEtano.o CHelmholtzDioxidoCarbono.o CHelmholtzIsobutano.o CHelmholtzNbutano.o CHelmholtzNitrogenio.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = PropriedadesSubstanciaPura.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+CSubstancia.o: CSubstancia.cpp
+	$(CPP) -c CSubstancia.cpp -o CSubstancia.o $(CXXFLAGS)
+
+CHelmholtzAgua.o: CHelmholtzAgua.cpp
+	$(CPP) -c CHelmholtzAgua.cpp -o CHelmholtzAgua.o $(CXXFLAGS)
+
+CSimuladorPropriedades.o: CSimuladorPropriedades.cpp
+	$(CPP) -c CSimuladorPropriedades.cpp -o CSimuladorPropriedades.o $(CXXFLAGS)
+
+CHelmholtz.o: CHelmholtz.cpp
+	$(CPP) -c CHelmholtz.cpp -o CHelmholtz.o $(CXXFLAGS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+CHelmholtzMetano.o: CHelmholtzMetano.cpp
+	$(CPP) -c CHelmholtzMetano.cpp -o CHelmholtzMetano.o $(CXXFLAGS)
+
+CHelmholtzEtano.o: CHelmholtzEtano.cpp
+	$(CPP) -c CHelmholtzEtano.cpp -o CHelmholtzEtano.o $(CXXFLAGS)
+
+CHelmholtzDioxidoCarbono.o: CHelmholtzDioxidoCarbono.cpp
+	$(CPP) -c CHelmholtzDioxidoCarbono.cpp -o CHelmholtzDioxidoCarbono.o $(CXXFLAGS)
+
+CHelmholtzIsobutano.o: CHelmholtzIsobutano.cpp
+	$(CPP) -c CHelmholtzIsobutano.cpp -o CHelmholtzIsobutano.o $(CXXFLAGS)
+
+CHelmholtzNbutano.o: CHelmholtzNbutano.cpp
+	$(CPP) -c CHelmholtzNbutano.cpp -o CHelmholtzNbutano.o $(CXXFLAGS)
+
+CHelmholtzNitrogenio.o: CHelmholtzNitrogenio.cpp
+	$(CPP) -c CHelmholtzNitrogenio.cpp -o CHelmholtzNitrogenio.o $(CXXFLAGS)

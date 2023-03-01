@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass extbook
+\textclass book
 \begin_preamble
 
 \usepackage {graphicx}
@@ -27,7 +27,7 @@
 \use_default_options false
 \master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
 \maintain_unincluded_children false
-\language brazilian
+\language english
 \language_package auto
 \inputencoding auto
 \fontencoding global
@@ -162,253 +162,332 @@ Eliminam-se os requisitos "impossíveis" e ajusta-se a idéia do sistema de
 \end_layout
 
 \begin_layout Section
-O que é a análise de domínio
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
 Análise de domínio
 \end_layout
 
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Análise-de-domínio"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Esta parte deve ser apagada na versão final; serve apenas como lembrete
- dos itens que vocês precisam considerar
+\begin_layout Itemize
+Áreas relacionadas:
 \end_layout
 
-\end_inset
-
-
+\begin_deeper
+\begin_layout Standard
+Uma área relacionada ao desenvolvimento deste software é a Engenharia de
+ Reservatório.
+ É a área da engenharia de petróleo que trata da descrição do comportamento
+ do óleo, gás e água no interior dos reservatórios de hidrocarbonetos, essencial
+ para o desenvolvimento de campos de petróleo.
+ Engenheiros de reservatório usam dados sobre as propriedades dos fluidos
+ e rochas no reservátorio, assim como o histórico deste para prever seu
+ comportamento futuro.
 \end_layout
 
 \begin_layout Standard
-A análise de domínio é uma parte da elaboração; seu objetivo é entender
- o domínio, a abrangência do sistema a ser desenvolvido.
- Envolve itens como estimar o reuso do sistema.
- Neste ponto, o analista pensa no sistema de uma forma mais genérica, identifica
-ndo conceitos fundamentais que podem ser reaproveitados em outros sistemas.
+Outra área relacionada é a da modelagem numérica computacional, que deselvolve
+ modelos matemáticos para a solução de um determinado problema físico e
+ então deselvolve o modelo computacional por meio de algoritmos para encontrar
+ a solução deste problema por meio de um computador.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sub-áreas relacionadas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A simulação de reservatórios constitui uma sub-área na engenharia de reservatóri
+o.
  
-\end_layout
-
-\begin_layout Itemize
-Estudo dos requisitos/especificações do sistema.
-\end_layout
-
-\begin_layout Itemize
-Definição e caracterização do domínio a ser investigado (área dos softwares
- e bibliotecas a serem investigadas).
- Uma boa maneira de identificar os assuntos relacionados ao sistema que
- está sendo desenvolvido é dar uma olhada nos livros, manuais e artigos
- da área.
-\end_layout
-
-\begin_layout Itemize
-Manter contato com especialistas que tenham domínio dos conceitos envolvidos.
- Segundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-UML-MartimFowler"
-
+\begin_inset Newline newline
 \end_inset
 
-, estas pessoas "devem ser abertas, ter bastante conhecimento prático e
- estar disponíveis para perguntas".
-\end_layout
-
-\begin_layout Itemize
-Deve-se fazer entrevistas com os usuários do sistema (para detalhamento
- dos diagramas de caso de uso).
-\end_layout
-
-\begin_layout Itemize
-Identificação de amostras (instalar e testar softwares e bibliotecas similares).
-\end_layout
-
-\begin_layout Itemize
-Na elaboração deve-se analisar a possibilidade de se reaproveitar projetos
- antigos (sistemas existentes etc).
- Procurar as classes em bibliotecas existentes antes de implementá-las 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-
-\end_inset
-
-.
- Se a equipe de desenvolvimento já tem experiência com alguns sistemas,
- isto deve ser considerado.
- A idéia é reaproveitar o conhecimento legado.
-\end_layout
-
-\begin_layout Itemize
-Identificação e definição dos objetos genéricos (a serem reutilizados).
+Ela se trata da utilização do desenvolvimento de simuladores de reservatório,
+ que por meio de modelos matemáticos buscam prever o comportamento de um
+ reservátorio de petróleo e de seus poços associados.
+ Os simuladores podem ser do tipo 
+\emph on
+black oil 
+\emph default
+ou composicionais, no primeiro o óleo é considerado uma substância só, e
+ no segundo uma mistura de diversas substâncias.
 \end_layout
 
 \begin_layout Standard
-Talvez o aspecto mais importante da elaboração seja o contato com o cliente.
- Quando o cliente/usuário tem uma noção básica de como o sistema é desenvolvido,
- ele passa a fazer solicitações que serão mais facilmente implementadas.
- 
+A termodinâmica é uma área da física que estuda os efeitos de mudanças na
+ temperatura, pressão, volume e outras propriedades termodinâmicas de um
+ sistema.
+ Ela é extremamente importante no desenvolvimento de um simulador de reservatóri
+o pois os fluidos de um reservatório sofrem diversas alterações físicas
+ durante sua produção, sendo necessária uma boa modelagem termodinâmica
+ para entender como eles reagirão a estas alterações.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../imagens/AnaliseDeDominio.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Elaboração e análise de domínio
-\begin_inset CommandInset label
-LatexCommand label
-name "cap:Análise-de-domínio."
-
-\end_inset
-
- (adaptado de 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-
-\end_inset
-
-).
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Análise de domínio
-\end_layout
-
-\begin_layout Standard
-Após estudo dos requisitos/especificações do sistema, algumas entrevistas,
- estudos na biblioteca e disciplinas do curso foi possível identificar nosso
- domínio de trabalho:
-\end_layout
-
-\begin_layout Itemize
-Definição e caracterização do domínio a ser investigado 
-\end_layout
-
-\begin_layout Itemize
-Descrição das áreas/disciplinas relacionadas.
-\end_layout
-
-\begin_layout Itemize
-Descrição de questões associadas a espaço/tempo (espaço físico, local, instalaçã
-o).
-\end_layout
-
-\begin_layout Itemize
-Fotografias de sistemas equivalentes/parecidos.
-\end_layout
-
-\begin_layout Itemize
-...
-\end_layout
-
+\end_deeper
 \begin_layout Section
 Formulação teórica
 \end_layout
 
 \begin_layout Standard
-...coloque aqui texto explicando a formulação física-matemática, a descrição
- das equações que serão utilizadas...
+O software calcula as propriedades termodinâmicas de uma substância.
+ Para isso será usada uma equação experimental para calcular a energia livre
+ de Helmholtz e suas derivadas.
+ Com estas é possivel calcular todas as propriedades através de relações
+ termodinâmicas apresentadas a seguir.
 \end_layout
 
 \begin_layout Standard
-...aqui entram figuras, tabelas explicativas, equações a serem utilizadas no
- software...
-\end_layout
-
-\begin_layout Standard
-...logo depois, com os dados levantados na análise de domínio, e esta formulação
- teórica, iremos identificar os pacotes, os assuntos com os quais iremos
- trabalhar...
-\end_layout
-
-\begin_layout Standard
-...
- no final da formulação teórica, indicar livros e artigos que tem mais informaçã
-o sobre o assunto...
-\end_layout
-
-\begin_layout Standard
-...se vai usar modelos numéricos, colocar seção 3.3.x falando deles; no final
- citar/referenciar fontes...
-\end_layout
-
-\begin_layout Section
-O que é identificação de pacotes
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Identificação de pacotes
-\end_layout
+A energia livre de Helmholtz é um potencial termodinâmico que mede o trabalho
+ útil obtido a partir de um sistema termodinâmico fechado à temperatura
+ constante.
+ Ela é definida como:
+\begin_inset Formula 
+\begin{equation}
+f(\rho,T)=h(T)-RT-Ts(\rho,T)
+\end{equation}
 
 \end_inset
 
- -- assuntos
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Identificação-de-pacotes"
-
+ Esta energia será modelada através da sua forma adimensional, a dividindo
+ em uma parte ideal 
+\begin_inset Formula $\phi^{o}$
 \end_inset
 
+ e uma parte residual 
+\begin_inset Formula $\phi^{r}$
+\end_inset
 
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Assuntos
+:
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{f(\delta,\tau)}{RT}=\phi(\delta,\tau)=\phi^{o}(\delta,\tau)+\phi^{r}(\delta,\tau)
+\end{equation}
+
+\end_inset
+
+Sendo 
+\begin_inset Formula 
+\[
+\delta=\frac{\rho}{\rho_{c}}
+\]
+
+\end_inset
+
+ a densidade reduzida para uma densidade crítica 
+\begin_inset Formula $\rho_{c}$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\frac{kg}{m^{3}}\right]$
+\end_inset
+
+e 
+\begin_inset Formula 
+\[
+\tau=\frac{T_{c}}{T}
+\]
+
+\end_inset
+
+a temperatura reduzida para uma temperatura crítica 
+\begin_inset Formula $T_{c}$
 \end_inset
 
 
+\begin_inset Formula $\left[K\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A parte ideal 
+\begin_inset Formula $\phi^{o}$
+\end_inset
+
+ é representada pela equação:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi^{o}=\ln\delta+n_{1}^{o}+n_{2}^{o}\tau+n_{3}^{o}\ln\tau+\stackrel[i=4]{8}{\sum}n_{i}^{o}\ln[1-e^{-\gamma_{i}^{o}\tau}],
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E a parte residual 
+\begin_inset Formula $\phi^{r}$
+\end_inset
+
+ pela soma de quatro partes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi^{r}=\phi_{1}^{r}+\phi_{2}^{r}+\phi_{3}^{r}+\phi_{4}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte polinomial 
+\begin_inset Formula 
+\begin{equation}
+\phi_{1}^{r}=\stackrel[i=1]{m}{\sum}n_{i}\delta^{d_{i}}\tau^{t_{i}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte exponencial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{2}^{r}=\stackrel[i=1]{n}{\sum}n_{i}\delta^{d_{i}}\tau^{t_{i}}e^{-\delta^{c_{i}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte de curva Gaussiana
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{3}^{r}=\stackrel[i=52]{r}{\sum}n_{i}\delta^{d_{i}}\tau^{t_{i}}e^{-a_{i}(\delta-\epsilon_{i})^{2}-\beta_{i}(\tau-\gamma_{i})^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte não-analítica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{4}^{r}=\stackrel[i=1]{s}{\sum}\triangle^{b_{i}}\delta\psi
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+com 
+\begin_inset Formula 
+\[
+\triangle=\theta^{2}+B_{i}[(\delta-1)^{2}]^{a_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta=(1-\tau)+A_{i}[(\delta,-1)^{2}]^{1/(2\beta_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi=e^{-C_{i}(\delta-1)^{2}-D_{i}(\tau-1)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo os coeficientes com subíndice 
+\begin_inset Formula $i$
+\end_inset
+
+ constantes adquiridas experimentalmente, obtidas na literatura 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Esta parte deve ser apagada na versão final; serve apenas como lembrete
- dos itens que vocês precisam considerar
+(pg.
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:SETZMANN,-U.;-WAGNER,"
+
+\end_inset
+
+)
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "butano,c2h6"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ch4,co2,iapws95,n2"
+
+\end_inset
+
+ para cada substância.
+\end_layout
+
+\begin_layout Standard
+Com estas equações é possível obter diversas propriedades termodinâmicas,
+ a partir das relações a seguir:
+\end_layout
+
+\begin_layout Standard
+Pressão
+\begin_inset Formula $\left[Bar\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{p(\delta,\tau)}{\rho RT}=1+\delta\phi_{\delta}^{r}
+\end{equation}
 
 \end_inset
 
@@ -416,51 +495,217 @@ Esta parte deve ser apagada na versão final; serve apenas como lembrete
 \end_layout
 
 \begin_layout Standard
-Um assunto é aquilo que é tratado ou abordado em uma discussão, em um estudo
- e é utilizado para orientar o leitor em um modelo amplo e complexo.
+Entropia
+\begin_inset Formula $\left[\frac{kJ}{kg\ldotp K}\right]$
+\end_inset
+
+:
 \end_layout
 
-\begin_layout Itemize
-Se um grupo de classes troca muitas informações entre si, provavelmente
- as classes fazem parte de um mesmo assunto.
- Assim, classes que se relacionam por meio de conceitos em comum fazem parte
- de uma mesma área, são reunidas e formam um assunto (pacote).
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{s(\delta,\tau)}{R}=\tau(\phi_{\tau}^{o}+\phi_{\tau}^{rM=})-\phi^{o}-\phi^{r}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Em um pacote, os nomes de classes e de associações devem ser semelhantes.
- 
+\begin_layout Standard
+Energia Interna
+\begin_inset Formula $\left[\frac{kJ}{kg}\right]$
+\end_inset
+
+:
 \end_layout
 
-\begin_layout Itemize
-Preste atenção a semelhanças na forma.
- Procedimentos semelhantes indicam polimorfismo e são candidatos a superclasses.
- Usualmente a classe mais genérica de uma hierarquia de classes identifica
- um assunto.
- 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{u(\delta,\tau)}{RT}=\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entalpia
+\begin_inset Formula $\left[\frac{kJ}{kg}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{h(\delta,\tau)}{RT}=1+\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})+\delta\phi_{\delta}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energia livre de Gibbs
+\begin_inset Formula $\left[\frac{kJ}{kg}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{g(\delta,\tau)}{RT}=1+\phi^{o}+\phi^{r}+\delta\phi_{\delta}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica isocórica 
+\begin_inset Formula $\left[\frac{kJ}{kg\ldotp K}\right]$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{c_{v}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica isobárica 
+\begin_inset Formula $\left[\frac{kJ}{kg\ldotp K}\right]$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{c_{p}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})+\frac{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}}{1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Velocidade do som
+\begin_inset Formula $\left[\frac{m}{s}\right]$
+\end_inset
+
+
+\begin_inset Formula $:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{w^{2}(\delta,\tau)}{RT}=1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}-\frac{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}}{\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de Joule-Thomson
+\begin_inset Formula $\left[\frac{K}{MPa}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu R\rho=\frac{-(\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}+\delta\tau\phi_{\delta\tau}^{r})}{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})(1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de enforcamento isotérmico
+\begin_inset Formula $\left[\frac{kJ}{kg\cdotp MPa}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\delta_{T}\rho=\frac{1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r}}{1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de temperatura-pressão isentrópico
+\begin_inset Formula $\left[\frac{K}{MPa}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta_{s}\rho R=\frac{1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r}}{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})(1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r})}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Identificação de pacotes -- assuntos
 \end_layout
 
-\begin_layout Standard
-...aqui...
+\begin_layout Itemize
+Pacote Substância: Esse pacote armazena os dados de uma substância, e possui
+ métodos para mostrá-los ou gravá-los.
 \end_layout
 
 \begin_layout Itemize
-Nome Pacote: Descrição.
- O que é, para que serve, como se relaciona com os demais pacotes.
+Pacote Helmholtz: Esse pacote contêm os coeficientes para a equação experimental
+ de cada substância, e os metodos de cálculo da energia livre de Helmholtz
+ e suas derivadas.
 \end_layout
 
 \begin_layout Itemize
-Nome Pacote: Descrição.
- O que é, para que serve, como se relaciona com os demais pacotes.
-\end_layout
-
-\begin_layout Itemize
-Nome Pacote: Descrição.
- O que é, para que serve, como se relaciona com os demais pacotes.
+Pacote Simulador: Gerencia a simulação, tendo métodos que usam o pacote
+ Helmholtz para calcular as propriedades do pacote Substância.
 \end_layout
 
 \begin_layout Section
@@ -527,39 +772,19 @@ Um diagrama de pacotes é útil para mostrar as dependências entre as diversas
  uso.
 \end_layout
 
-\begin_layout Standard
-O exemplo da Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cap:Relacionamento-dos-diagramas-estruturais-da-uml"
-
-\end_inset
-
- apresenta um diagrama de pacotes para um sistema de métodos numéricos.
- Observe que o diagrama de pacotes inclui um pacote bibliotecas, o qual
- é dividido em bibliotecas matemáticas, de estatística e de simulação.
- A seguir o componente biblioteca de simulação será detalhado.
- 
-\end_layout
-
 \begin_layout Section
 Diagrama de pacotes -- assuntos
 \end_layout
 
 \begin_layout Standard
-...aqui...
-\end_layout
-
-\begin_layout Standard
-coloque aqui texto falando do diagrama de pacotes, referencie a figura.
- Veja Figura 
+O diagrama de pacotes da Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diagrama-de-Pacotes"
 
 \end_inset
 
-.
+ mostra a relação entre os diferentes pacotes do software desenvolvido.
 \end_layout
 
 \begin_layout Standard
@@ -571,8 +796,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/AnaliseDeDominio.png
-	width 100text%
+	filename ../imagens/Diagrama_de_Pacotes.bmp
+	scale 70
 
 \end_inset
 
@@ -601,22 +826,6 @@ name "fig:Diagrama-de-Pacotes"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-Nota: 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Não perca de vista a visão do todo; do projeto de engenharia como um todo.
- Cada capítulo, cada seção, cada parágrafo deve se encaixar.
- Este é um diferencial fundamental do engenheiro em relação ao técnico,
- a capacidade de desenvolver projetos, de ver o todo e suas diferentes partes,
- de modelar processos/sistemas/produtos de engenharia.
 \end_layout
 
 \end_body

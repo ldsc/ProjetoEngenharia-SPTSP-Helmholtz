@@ -1,0 +1,434 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\color black
+IAPWS-95
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A IAPWS-95 é uma formulação termodinâmica para água desenvolvida pela Internacio
+nal Association of Properties of Steam and Water.
+ A equação desta formulação é valida para temperaturas a partir da curva
+ de fusão até 1273 K e pressões de até 1000 MPA, mas ela pode ser extrapolada
+ até pressões e temperaturas extremamente altas para as propriedades básicas,
+ como pressão e entalpia.
+ 
+\end_layout
+
+\begin_layout Standard
+A equação parte da energia livre de Helmholtz adimensional 
+\begin_inset Formula $\frac{f(\delta,\tau)}{RT}$
+\end_inset
+
+, a tornando adimensional ao dividi-la por RT, e separando essa em uma parte
+ que representa um gás ideal nesta 
+\begin_inset Formula $T$
+\end_inset
+
+ e 
+\begin_inset Formula $\rho$
+\end_inset
+
+, 
+\begin_inset Formula $\phi\textdegree$
+\end_inset
+
+, e uma de liquido residual, 
+\begin_inset Formula $\phi^{r}$
+\end_inset
+
+, sendo 
+\begin_inset Formula $\delta=\frac{p}{p_{c}}$
+\end_inset
+
+ a pressão reduzida e 
+\begin_inset Formula $\tau=\frac{t_{c}}{t}$
+\end_inset
+
+ o inverso da temperatura reduzida.
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação da parte de gás ideal é
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi^{o}=\ln\delta+n_{1}^{o}+n_{2}^{o}\tau+n_{3}^{o}\ln\tau+\stackrel[i=4]{8}{\sum}n_{i}^{o}\ln[1-e^{-\gamma_{i}^{o}\tau}],$
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A parte residual consiste do somatório de 7 termos polinomiais, 44 termos
+ polinomiais multiplicados por funções exponenciais, 3 termos de curva gaussiana
+ e 2 termos não analíticos, sendo sua equação
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi^{r}=\stackrel[i=1]{7}{\sum}n_{i}\delta_{i}^{d_{i}}\tau^{t_{i}}+\stackrel[i=8]{51}{\sum}n_{i}\delta_{i}^{d_{i}}\tau^{t_{i}}e^{-\delta^{c_{i}}}+\stackrel[i=52]{54}{\sum}n_{i}\delta_{i}^{d_{i}}\tau^{t_{i}}e^{-a_{i}(\delta-\epsilon_{i})^{2}-\beta_{i}(\tau-\gamma_{i})^{2}}+\stackrel[i=55]{56}{\sum n_{i}\triangle^{b_{i}}\delta\psi}$
+\end_inset
+
+,
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+com 
+\begin_inset Formula $\triangle=\theta^{2}+B_{i}[(\delta-1)^{2}]^{a_{i}}$
+\end_inset
+
+, 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 0.83cm
+\end_inset
+
+
+\begin_inset Formula $\theta=(1-\tau)+A_{i}[(\delta,-1)^{2}]^{1/(2\beta_{i})}$
+\end_inset
+
+,
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 0.8cm
+\end_inset
+
+
+\begin_inset Formula $\psi=e^{-C_{i}(\delta-1)^{2}-D_{i}(\tau-1)^{2}}$
+\end_inset
+
+.
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Com estas equações é possível obter todas as propriedades termodinamicas
+ da água, a partir das relações a seguir: 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pressão:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{p(\delta,\tau)}{\rho RT}=1+\delta\phi_{\delta}^{r}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entropia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{s(\delta,\tau)}{R}=\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})-\phi^{o}-\phi^{r}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energia Interna:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{u(\delta,\tau)}{RT}=\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entalpia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{h(\delta,\tau)}{RT}=1+\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})+\delta\phi_{\delta}^{r}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energia livre de Gibbs:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{g(\delta,\tau)}{RT}=1+\phi^{o}+\phi^{r}+\delta\phi_{\delta}^{r}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica isocórica :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{c_{v}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica isobárica :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{c_{p}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})+\frac{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}}{1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica de líquido saturado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{c_{\sigma}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})+\frac{1+\delta^{'}\phi_{\delta}^{r}-\delta^{'}\tau\phi_{\delta\tau}^{r}}{1+2\delta^{'}\phi_{\delta}^{r}+\delta^{'2}\phi_{\delta\delta}^{r}}$
+\end_inset
+
+
+\begin_inset Formula $.\left[(1+\delta^{'}\phi_{\delta}^{r}-\delta^{'}\tau\phi_{\delta\tau}^{r})-\frac{\rho_{c}}{R\delta^{'}}\frac{dp_{\sigma}}{dT}\right]^{b}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Velocidade do som:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{w^{2}(\delta,\tau)}{RT}=1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}-\frac{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}}{\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de Joule-Thomson:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu R\rho=\frac{-(\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}+\delta\tau\phi_{\delta\tau}^{r})}{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})(1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r})}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de throttle isotérmico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{T}\rho=\frac{1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r}}{1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de temperatura-pressão isentrópico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta_{s}\rho R=\frac{1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r}}{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})(1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r})}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Segundo coeficiente de Virial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B(\tau)\rho_{c}=\underset{\delta\rightarrow0}{\lim\phi_{\delta}^{r}(\delta,\tau)}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Terceiro coeficiente de Virial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C(\tau)\rho_{c}^{2}=\underset{\delta\rightarrow0}{\lim\phi_{\delta\delta}^{r}(\delta,\tau)}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

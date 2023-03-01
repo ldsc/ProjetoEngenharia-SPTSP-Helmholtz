@@ -1,0 +1,825 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language english
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração} 
+\backslash
+rhead{} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depois da definição dos objetivos, da especificação do software e da montagem
+ dos primeiros diagramas de caso de uso, a equipe de desenvolvimento do
+ projeto de engenharia passa por um processo de elaboração que envolve o
+ estudo de conceitos relacionados ao sistema a ser desenvolvido, a análise
+ de domínio e a identificação de pacotes.
+ 
+\end_layout
+
+\begin_layout Standard
+Na elaboração fazemos uma análise dos requisitos, ajustando os requisitos
+ iniciais de forma a desenvolver um sistema útil, que atenda às necessidades
+ do usuário e, na medida do possível, permita seu reuso e futura extensão.
+\end_layout
+
+\begin_layout Standard
+Eliminam-se os requisitos "impossíveis" e ajusta-se a idéia do sistema de
+ forma que este seja flexível, considerando-se aspectos como custos e prazos.
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\end_layout
+
+\begin_layout Itemize
+Áreas relacionadas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Uma área relacionada ao desenvolvimento deste software é a Engenharia de
+ Reservatório.
+ É a área da engenharia de petróleo que trata da descrição do comportamento
+ do óleo, gás e água no interior dos reservatórios de hidrocarbonetos, essencial
+ para o desenvolvimento de campos de petróleo.
+ Engenheiros de reservatório usam dados sobre as propriedades dos fluidos
+ e rochas no reservátorio, assim como o histórico deste para prever seu
+ comportamento futuro.
+\end_layout
+
+\begin_layout Standard
+Outra área relacionada é a da modelagem numérica computacional, que deselvolve
+ modelos matemáticos para a solução de um determinado problema físico e
+ então deselvolve o modelo computacional por meio de algoritmos para encontrar
+ a solução deste problema por meio de um computador.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sub-áreas relacionadas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A simulação de reservatórios constitui uma sub-área na engenharia de reservatóri
+o.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Ela se trata da utilização do desenvolvimento de simuladores de reservatório,
+ que por meio de modelos matemáticos buscam prever o comportamento de um
+ reservátorio de petróleo e de seus poços associados.
+ Os simuladores podem ser do tipo 
+\emph on
+black oil 
+\emph default
+ou composicionais, no primeiro o óleo é considerado uma substância só, e
+ no segundo uma mistura de diversas substâncias.
+\end_layout
+
+\begin_layout Standard
+A termodinâmica é uma área da física que estuda os efeitos de mudanças na
+ temperatura, pressão, volume e outras propriedades termodinâmicas de um
+ sistema.
+ Ela é extremamente importante no desenvolvimento de um simulador de reservatóri
+o pois os fluidos de um reservatório sofrem diversas alterações físicas
+ durante sua produção, sendo necessária uma boa modelagem termodinâmica
+ para entender como eles reagirão a estas alterações.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Formulação teórica
+\end_layout
+
+\begin_layout Standard
+O software calcula as propriedades termodinâmicas de uma substância.
+ Para isso será usada uma equação experimental para calcular a energia livre
+ de Helmholtz e suas derivadas.
+ Com estas é possivel calcular todas as propriedades através de relações
+ termodinâmicas apresentadas a seguir.
+\end_layout
+
+\begin_layout Standard
+A energia livre de Helmholtz é um potencial termodinâmico que mede o trabalho
+ útil obtido a partir de um sistema termodinâmico fechado à temperatura
+ constante.
+ Ela é definida como:
+\begin_inset Formula 
+\begin{equation}
+f(\rho,T)=h(T)-RT-Ts(\rho,T)
+\end{equation}
+
+\end_inset
+
+ Esta energia será modelada através da sua forma adimensional, a dividindo
+ em uma parte ideal 
+\begin_inset Formula $\phi^{o}$
+\end_inset
+
+ e uma parte residual 
+\begin_inset Formula $\phi^{r}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{f(\delta,\tau)}{RT}=\phi(\delta,\tau)=\phi^{o}(\delta,\tau)+\phi^{r}(\delta,\tau)
+\end{equation}
+
+\end_inset
+
+Sendo 
+\begin_inset Formula 
+\[
+\delta=\frac{\rho}{\rho_{c}}
+\]
+
+\end_inset
+
+ a densidade reduzida para uma densidade crítica 
+\begin_inset Formula $\rho_{c}$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\frac{kg}{m^{3}}\right]$
+\end_inset
+
+e 
+\begin_inset Formula 
+\[
+\tau=\frac{T_{c}}{T}
+\]
+
+\end_inset
+
+a temperatura reduzida para uma temperatura crítica 
+\begin_inset Formula $T_{c}$
+\end_inset
+
+
+\begin_inset Formula $\left[K\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A parte ideal 
+\begin_inset Formula $\phi^{o}$
+\end_inset
+
+ é representada pela equação:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi^{o}=\ln\delta+n_{1}^{o}+n_{2}^{o}\tau+n_{3}^{o}\ln\tau+\stackrel[i=4]{8}{\sum}n_{i}^{o}\ln[1-e^{-\gamma_{i}^{o}\tau}],
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E a parte residual 
+\begin_inset Formula $\phi^{r}$
+\end_inset
+
+ pela soma de quatro partes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi^{r}=\phi_{1}^{r}+\phi_{2}^{r}+\phi_{3}^{r}+\phi_{4}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte polinomial 
+\begin_inset Formula 
+\begin{equation}
+\phi_{1}^{r}=\stackrel[i=1]{m}{\sum}n_{i}\delta^{d_{i}}\tau^{t_{i}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte exponencial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{2}^{r}=\stackrel[i=1]{n}{\sum}n_{i}\delta^{d_{i}}\tau^{t_{i}}e^{-\delta^{c_{i}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte de curva Gaussiana
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{3}^{r}=\stackrel[i=52]{r}{\sum}n_{i}\delta^{d_{i}}\tau^{t_{i}}e^{-a_{i}(\delta-\epsilon_{i})^{2}-\beta_{i}(\tau-\gamma_{i})^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parte não-analítica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{4}^{r}=\stackrel[i=1]{s}{\sum}\triangle^{b_{i}}\delta\psi
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+com 
+\begin_inset Formula 
+\[
+\triangle=\theta^{2}+B_{i}[(\delta-1)^{2}]^{a_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta=(1-\tau)+A_{i}[(\delta,-1)^{2}]^{1/(2\beta_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi=e^{-C_{i}(\delta-1)^{2}-D_{i}(\tau-1)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo os coeficientes com subíndice 
+\begin_inset Formula $i$
+\end_inset
+
+ constantes adquiridas experimentalmente, obtidas na literatura 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(pg.
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:SETZMANN,-U.;-WAGNER,"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "butano,c2h6,ch4,co2,iapws95,n2"
+
+\end_inset
+
+ para cada substância.
+\end_layout
+
+\begin_layout Standard
+Com estas equações é possível obter diversas propriedades termodinâmicas,
+ a partir das relações a seguir:
+\end_layout
+
+\begin_layout Standard
+Pressão
+\begin_inset Formula $\left[Bar\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{p(\delta,\tau)}{\rho RT}=1+\delta\phi_{\delta}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entropia
+\begin_inset Formula $\left[\frac{kJ}{kg\ldotp K}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{s(\delta,\tau)}{R}=\tau(\phi_{\tau}^{o}+\phi_{\tau}^{rM=})-\phi^{o}-\phi^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energia Interna
+\begin_inset Formula $\left[\frac{kJ}{kg}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{u(\delta,\tau)}{RT}=\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entalpia
+\begin_inset Formula $\left[\frac{kJ}{kg}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{h(\delta,\tau)}{RT}=1+\tau(\phi_{\tau}^{o}+\phi_{\tau}^{r})+\delta\phi_{\delta}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energia livre de Gibbs
+\begin_inset Formula $\left[\frac{kJ}{kg}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{g(\delta,\tau)}{RT}=1+\phi^{o}+\phi^{r}+\delta\phi_{\delta}^{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica isocórica 
+\begin_inset Formula $\left[\frac{kJ}{kg\ldotp K}\right]$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{c_{v}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacidade calorífica isobárica 
+\begin_inset Formula $\left[\frac{kJ}{kg\ldotp K}\right]$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{c_{p}(\delta,\tau)}{R}=-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})+\frac{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}}{1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Velocidade do som
+\begin_inset Formula $\left[\frac{m}{s}\right]$
+\end_inset
+
+
+\begin_inset Formula $:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{w^{2}(\delta,\tau)}{RT}=1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}-\frac{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}}{\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de Joule-Thomson
+\begin_inset Formula $\left[\frac{K}{MPa}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu R\rho=\frac{-(\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}+\delta\tau\phi_{\delta\tau}^{r})}{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})(1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de enforcamento isotérmico
+\begin_inset Formula $\left[\frac{kJ}{kg\cdotp MPa}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\delta_{T}\rho=\frac{1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r}}{1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Coeficiente de temperatura-pressão isentrópico
+\begin_inset Formula $\left[\frac{K}{MPa}\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta_{s}\rho R=\frac{1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r}}{(1+\delta\phi_{\delta}^{r}-\delta\tau\phi_{\delta\tau}^{r})^{2}-\tau^{2}(\phi_{\tau\tau}^{o}+\phi_{\tau\tau}^{r})(1+2\delta\phi_{\delta}^{r}+\delta^{2}\phi_{\delta\delta}^{r})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Identificação de pacotes -- assuntos
+\end_layout
+
+\begin_layout Itemize
+Pacote Substância: Esse pacote armazena os dados de uma substância, e possui
+ métodos para mostrá-los ou gravá-los.
+\end_layout
+
+\begin_layout Itemize
+Pacote Helmholtz: Esse pacote contêm os coeficientes para a equação experimental
+ de cada substância, e os metodos de cálculo da energia livre de Helmholtz
+ e suas derivadas.
+\end_layout
+
+\begin_layout Itemize
+Pacote Simulador: Gerencia a simulação, tendo métodos que usam o pacote
+ Helmholtz para calcular as propriedades do pacote Substância.
+\end_layout
+
+\begin_layout Section
+O que é o diagrama de pacotes
+\emph on
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de pacotes
+\end_layout
+
+\end_inset
+
+
+\emph default
+ -- assuntos
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+assuntos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+módulos
+\end_layout
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de pacotes (assuntos)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:diagrama de assuntos-pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um diagrama de pacotes é útil para mostrar as dependências entre as diversas
+ partes do sistema; pode incluir: sistemas, subsistemas, hierarquias de
+ classes, classes, interfaces, componentes, nós, colaborações e casos de
+ uso.
+\end_layout
+
+\begin_layout Section
+Diagrama de pacotes -- assuntos
+\end_layout
+
+\begin_layout Standard
+O diagrama de pacotes da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+ mostra a relação entre os diferentes pacotes do software desenvolvido.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagrama_de_Pacotes.bmp
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Pacotes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

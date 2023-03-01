@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass extbook
+\textclass book
 \begin_preamble
 \usepackage {graphicx}
 \usepackage {longtable}
@@ -138,44 +138,48 @@ Todo projeto de engenharia passa por uma etapa de testes.
 \end_layout
 
 \begin_layout Section
-Teste 1: Descrição
+Teste 1: Teste dos cálculos
 \end_layout
 
 \begin_layout Standard
-No início apresente texto explicativo do teste:
+Neste teste são testados os valores das diferentes propriedades, suas derivadas
+ e as derivadas da energia de Helmholtz.
+ Estes valores são comparados com os encontrados na literatura ou, no caso
+ das derivadas, com valores das derivadas calculadas numéricamente.
 \end_layout
 
 \begin_layout Itemize
-O que esta sendo testado?
+Sequência do teste:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rodar programa
 \end_layout
 
 \begin_layout Itemize
-Como o teste vai ser realizado?
+Selecionar Água
 \end_layout
 
 \begin_layout Itemize
-Como o programa será validado?
+Entrar com temperatura=500 [K] e densidade=838.025 [kg/m³]
 \end_layout
 
-\begin_layout Standard
-A seguir apresente texto explicando a sequência do teste e imagens do programa
- (captura de tela).
-\end_layout
-
-\begin_layout Standard
-coloque aqui texto falando do diagrama de pacotes, referencie a figura.
- Veja Figura 
+\begin_layout Itemize
+Veja resultados na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Teste-TelaPrograma-Captura1"
+reference "fig:TelaPrograma-Teste-1-txt"
 
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -183,8 +187,11 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/SAIL-TelaCapturada-2.png
-	width 100text%
+	filename ../imagens/Teste1.png
+	width 95text%
+	height 95theight%
+	keepAspectRatio
+	rotateAngle 90
 
 \end_inset
 
@@ -195,10 +202,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tela do programa mostrando xxx
+Tela do programa mostrando os valores calculados no Teste 1
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Teste-TelaPrograma-Captura1"
+name "fig:TelaPrograma-Teste-1-txt"
 
 \end_inset
 
@@ -216,44 +223,49 @@ name "fig:Teste-TelaPrograma-Captura1"
 \end_layout
 
 \begin_layout Section
-Teste 2: Descrição
+Teste 2: Teste de funcionamento da interface gráfica
 \end_layout
 
 \begin_layout Standard
-No início apresente texto explicativo do teste:
+Neste teste verifica-se o funcionamento da interface gráfica.
+ Para sua realização, todas as propriedades serão calculadas para diversas
+ substâncias, temperaturas e densidades.
+ Os valores mostrados na tela serão comparados com os valores adquiridos
+ no programa em interface de texto.
 \end_layout
 
 \begin_layout Itemize
-O que esta sendo testado?
+Sequência do teste:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rodar programa
 \end_layout
 
 \begin_layout Itemize
-Como o teste vai ser realizado?
+Selecionar Água
 \end_layout
 
 \begin_layout Itemize
-Como o programa será validado?
+Entrar com temperatura=500 [K] e densidade=838.025 [kg/m³]
 \end_layout
 
-\begin_layout Standard
-A seguir apresente texto explicando a sequência do teste e imagens do programa
- (captura de tela).
-\end_layout
-
-\begin_layout Standard
-Coloque aqui texto falando do diagrama de pacotes, referencie a figura.
- Veja Figura 
+\begin_layout Itemize
+Veja resultados na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Teste-TelaPrograma-Captura2"
+reference "fig:TelaPrograma-Teste-2-qt"
 
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -261,8 +273,11 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/SAIL-TelaCapturada-2.png
+	filename ../imagens/Teste2.png
 	width 100text%
+	height 100theight%
+	keepAspectRatio
+	rotateAngle 90
 
 \end_inset
 
@@ -273,10 +288,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tela do programa mostrando xxx
+Tela do programa mostrando o teste 2 para a água a T=500 e d=838.025
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Teste-TelaPrograma-Captura2"
+name "fig:TelaPrograma-Teste-2-qt"
 
 \end_inset
 
@@ -291,22 +306,6 @@ name "fig:Teste-TelaPrograma-Captura2"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-Nota: 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Não perca de vista a visão do todo; do projeto de engenharia como um todo.
- Cada capítulo, cada seção, cada parágrafo deve se encaixar.
- Este é um diferencial fundamental do engenheiro em relação ao técnico,
- a capacidade de desenvolver projetos, de ver o todo e suas diferentes partes,
- de modelar processos/sistemas/produtos de engenharia.
 \end_layout
 
 \end_body

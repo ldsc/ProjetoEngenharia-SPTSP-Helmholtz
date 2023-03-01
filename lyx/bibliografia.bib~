@@ -1,0 +1,165 @@
+%--------------------------------------------------------------------
+% NAME: thomas.bib (18/02/2002)
+%
+% O que é um arquivo BiBTeX?
+% É um arquivo em modo texto (tipo ASCII), que inclui referências completas para os
+% trabalhos (artigos/relatórios/teses/etc) a serem citados em sua monografia/dissertação/tese.
+%
+% Porque usar?
+% A vantagem de usar uma base de dados com as referencias bibliográficas
+% (como este arquivo), é que seu editor científico (ex: o LyX) 
+% poderá gerar as citações nos mais variados formatos acadêmicos.
+%
+% Como faço para usar?
+% No caso do LyX(2.0.2), você insere a base bibliográfica usando:
+% Lyx->Inserir->Listas e Indices->Bibliografia BiBTeX
+%
+% INSTRUÇÕES:
+% 0- Use o find (crtl-s ##)  para localizar as diferentes seções desta base de dados
+%    para próximo ítem basta digitar ctrl-s novamente (no emacs!).
+% 1-Use o emacs ou um editor simples para editar este arquivo
+%   Pode acentuar normalmente, usando çá,,; 
+
+% 2-Use o emacs (menu BIBTEX) para verificar a consistencia das entradas
+% Se tiver alguma inconsistência o emacs deve informar.
+
+% 3-Use o programa bibtool para gerar saída formatada.
+% ex: bibtool bibliografia
+
+% 4-Use as entradas normalmente no Lyx ou em outro editor tex.
+
+% 5-Se estiver no GNU/Linux, verifique se o arquivo .bib esta no formato do Unix. 
+% Use o programa dos2unix para converter arquivos do dos/windows para o GNU/Linux.
+% Use o programa unix2dos para converter arquivos do GNU/Linux para dos/windows.
+
+%   Para eliminar caracteris iso, e deixar somente ASCII, use o bibtool.
+%     bibtool -r iso2tex -i iso.bib -o ascii.bib
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Para facilitar a localizacao, use o formato
+% adb    - artigos pessoais
+% imgan  - artigos de análise de imagem
+% pm     - artigos sobre meios porosos
+% rec    - artigos reconstrução
+% perc   - artigos percolação 
+% perm   - artigos permeabilidade
+% me     - artigos multi-escala
+% prob   - artigos probabilidade, processos estocásticos
+% microt - artigos micro tomografia
+% numan  - artigos sobre métodos numéricos
+% math   - artigos matemáticos
+% sl     - software livre
+% prog   - artigos/manuais programação
+% hst    - artigos histerese
+% prog-cpp
+% prog-HOWTO
+% prog-linux
+% prog-uml
+% prog-paralela
+% prog-xml
+% prog-interface
+%--------------------------------------------------------------------
+
+% Exemplos:
+%  author =       "W. W. Howells",
+%  author =       "G. B. Johnson and W. W. Howells and A. N. Other",
+%  author =       "Firstname Jones and Firstname Norman and Firstname Hazel and Firstname Robinson",
+%  author =       "sobrenome, nome",
+% Para preservar, isto é, manter um nome use {Nome}
+
+% Definição de strings
+@String{LENEP  = {Laboratório de Engenharia e Exploração de Petróleo}}
+@String{UENF   = {Universidade Estadual do Norte Fluminense}}
+
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+% ## Artigos em revistas 
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+% ## Artigos em congressos 
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+% Livro 
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+% Artigos
+%--------------------------------------------------------------------
+@Article{iapws95,
+  author	= {W. Wagner and A. Prub},
+  title		= {The IAPWS Formulation 1995 for the Thermodynamic Properties
+of Ordinary Water Substance for General and Scientific Use},
+  journal	= {J. Phys. Chem. Ref. Data},
+  volume	= {31},
+  pages		= {387-535},
+  year		= {2002}
+}
+@Article{co2,
+  author	= {Roland Span and Wolfgang Wagner},
+  title		= {A New Equation of State for Carbon Dioxide Covering the Fluid Region from the Triple Point Temperature to 1100 K at Pressures up to 800 MPa},
+  journal	= {J. Phys. Chem. Ref. Data},
+  volume	= {25},
+  pages		= {1509-1596},
+  year		= {1996}
+}
+@Article{n2,
+  author	= {Roland Span and Wolfgang Wagner and Eric W. Lemmon and Richard T. Jacobsen and Akimichi Yokozeki},
+  title		= {A Reference Equation of State for the Thermodynamic Properties of Nitrogen for Temperatures from 63.151 to 1000 K and Pressures to 2200 MPa},
+  journal	= {J. Phys. Chem. Ref. Data},
+  volume	= {29},
+  pages		= {1361-1433},
+  year		= {2000}
+}
+@Article{c2h6,
+  author	= {D. Bucker and Wolfgang Wagner},
+  title		= {A Reference Equation of State for the Thermodynamic Properties of Ethane for Temperatures from the Melting Line to 675 K and Pressures up to 900 MPa},
+  journal	= {J. Phys. Chem. Ref. Data},
+  volume	= {35},
+  pages		= {205-266},
+  year		= {2006}
+}
+@Article{ch4,
+  author	= {U. Setzmann and Wolfgang Wagner},
+  title		= {A New Equation of State and Tables of Thermodynamic Properties for Methane
+Covering the Range from the Melting Line to 625 K at Pressures up to 100 MPa},
+  journal	= {J. Phys. Chem. Ref. Data},
+  volume	= {20},
+  pages		= {1061-1155},
+  year		= {1991}
+}
+@Article{butano,
+  author	= {D. Bucker and Wolfgang Wagner},
+  title		= {Reference Equations of State for the Thermodynamic Properties of Fluid Phase n Butane and Isobutane},
+  journal	= {J. Phys. Chem. Ref. Data},
+  volume	= {35},
+  pages		= {929-1019},
+  year		= {2006}
+}
+
+
+%--------------------------------------------------------------------
+% ## Assunto dos artigos abaixo...
+%--------------------------------------------------------------------
+@Article{Pavel-hysteresys,
+  author = 	 {B.Plohr and D. Marchesin and Pavel Bedrikovetsky and P. Krause},
+  title = 	 {Modeling hysteresys in porous media flow via relaxation},
+  journal = 	 {Computacional Geosciences},
+  year = 	 {2001},
+  volume = 	 {5},
+  pages = 	 {225-256}
+}
+
+%--------------------------------------------------------------------
+% ## Referencia online
+%--------------------------------------------------------------------
+@ONLINE{RefOnline,
+author = {Doe, Ringo},
+title = {This is a test entry of type {@ONLINE}},
+month = jun,
+year = {2009},
+url = {http://www.test.org/doe/}
+}
